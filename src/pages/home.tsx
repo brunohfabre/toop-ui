@@ -1,14 +1,14 @@
 import { useTheme } from '../components/theme-provider'
 
 export function Home() {
-  const { setTheme } = useTheme()
+  const { toggleTheme, changeColor } = useTheme()
 
   function handleChangeThemeToLight() {
-    setTheme('light')
+    toggleTheme('light')
   }
 
   function handleChangeThemeToDark() {
-    setTheme('dark')
+    toggleTheme('dark')
   }
 
   return (
@@ -23,10 +23,26 @@ export function Home() {
 
       <button
         type="button"
-        className="h-9 rounded-full bg-gray-12 px-4 text-sm text-gray-1 dark:bg-red-500"
+        className="h-9 bg-gray-12 px-4 text-sm text-gray-1 dark:bg-red-500"
         onClick={handleChangeThemeToDark}
       >
         Dark theme
+      </button>
+
+      <button
+        type="button"
+        className="h-9 bg-gray-12 px-4 text-sm text-gray-1 dark:bg-red-500"
+        onClick={() => changeColor('crimson')}
+      >
+        Crimson
+      </button>
+
+      <button
+        type="button"
+        className="h-9 bg-gray-12 px-4 text-sm text-gray-1 dark:bg-red-500"
+        onClick={() => changeColor('indigo')}
+      >
+        Indigo
       </button>
     </div>
   )

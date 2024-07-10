@@ -43,17 +43,23 @@ type Color =
 type ThemeProviderProps = {
   children: ReactNode
   defaultTheme?: Theme
+  defaultColor?: Color
   storageKey?: string
 }
 
 type ThemeProviderState = {
   theme: Theme
-  setTheme: (theme: Theme) => void
+  toggleTheme: (theme: Theme) => void
+
+  color: Color
+  changeColor: (color: Color) => void
 }
 
 const initialState: ThemeProviderState = {
   theme: 'system',
-  setTheme: () => null,
+  toggleTheme: () => null,
+  color: 'gray',
+  changeColor: () => null,
 }
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
@@ -61,11 +67,17 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
-  storageKey = 'toop-ui.theme',
+  defaultColor = 'gray',
+  storageKey = 'toop-ui',
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme,
+    () =>
+      (localStorage.getItem(`${storageKey}.theme`) as Theme) || defaultTheme,
+  )
+  const [color, setColor] = useState<Color>(
+    () =>
+      (localStorage.getItem(`${storageKey}.color`) as Color) || defaultColor,
   )
 
   useEffect(() => {
@@ -87,12 +99,32 @@ export function ThemeProvider({
     root.classList.add(theme)
   }, [theme])
 
+  useEffect(() => {
+    const root = window.document.documentElement
+
+    root.classList.add(color)
+  }, [color])
+
+  function changeColor(value: Color) {
+    if (value === color) {
+      return
+    }
+
+    const root = window.document.documentElement
+
+    root.classList.remove(color)
+    localStorage.setItem(`${storageKey}.color`, value)
+    setColor(value)
+  }
+
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme)
+    toggleTheme: (theme: Theme) => {
+      localStorage.setItem(`${storageKey}.theme`, theme)
       setTheme(theme)
     },
+    color,
+    changeColor,
   }
 
   return (
