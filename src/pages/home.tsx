@@ -15,7 +15,7 @@ export function Home() {
     <div className="flex h-screen items-center justify-center gap-2 bg-gray-1 p-4 text-gray-12 antialiased transition-colors">
       <button
         type="button"
-        className="h-9 bg-gray-12 px-4 text-sm text-gray-1"
+        className="h-9 rounded-md bg-gray-12 px-4 text-sm text-gray-1"
         onClick={handleChangeThemeToLight}
       >
         Light theme
@@ -23,7 +23,7 @@ export function Home() {
 
       <button
         type="button"
-        className="h-9 bg-gray-12 px-4 text-sm text-gray-1 dark:bg-red-500"
+        className="h-9 rounded-full bg-gray-12 px-4 text-sm text-gray-1 dark:bg-red-500"
         onClick={handleChangeThemeToDark}
       >
         Dark theme

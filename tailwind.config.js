@@ -21,6 +21,12 @@ export default {
         gray: generateScale('gray'),
       },
     },
+    borderRadius: {
+      sm: 'calc(var(--radius) - 4px)',
+      md: 'var(--radius)',
+      lg: 'calc(var(--radius) + 4px)',
+      full: '99999px',
+    },
   },
   plugins: [],
 }
