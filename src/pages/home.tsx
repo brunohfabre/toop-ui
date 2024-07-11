@@ -31,7 +31,9 @@ export function Home() {
                 <div
                   className={cn(
                     'size-[18px] rounded-full',
-                    item && `bg-${item}-9`,
+                    item && {
+                      [`bg-${item}-9`]: true,
+                    },
                   )}
                 />
                 {item}
