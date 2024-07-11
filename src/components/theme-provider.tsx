@@ -6,7 +6,7 @@ import {
   type ReactNode,
 } from 'react'
 
-const colors = [
+export const colors = [
   'gray',
   'mauve',
   'slate',
@@ -41,7 +41,8 @@ const colors = [
 ] as const
 type Color = (typeof colors)[number]
 
-type Theme = 'light' | 'dark' | 'system'
+export const themes = ['light', 'dark', 'system']
+type Theme = (typeof themes)[number]
 
 type ThemeProviderProps = {
   children: ReactNode

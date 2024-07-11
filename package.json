@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
+    "clsx": "^2.1.1",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@siakit/eslint-config": "^0.0.11",
