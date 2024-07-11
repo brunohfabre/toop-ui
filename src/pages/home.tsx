@@ -6,7 +6,7 @@ export function Home() {
     useTheme()
 
   return (
-    <div className="flex h-screen items-center bg-gray-2 px-4 py-8 antialiased">
+    <div className="h-screen items-center overflow-auto px-4 py-8 antialiased">
       <div className="mx-auto flex max-w-96 flex-col gap-6">
         <div className="h-20 items-center justify-center rounded-lg bg-primary-9" />
 
