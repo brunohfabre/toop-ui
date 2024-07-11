@@ -160,6 +160,10 @@
 
 :root {
   --radius: 0.5rem;
+
+  * {
+    color: var(--gray-12);
+  }
 }
 
 :root.gray {

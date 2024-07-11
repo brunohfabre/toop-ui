@@ -20,7 +20,7 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 ',
                 color === 'gray' && 'border-gray-12',
               )}
               onClick={() => changeColor('gray')}
@@ -32,8 +32,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-mauve-12',
-                color === 'mauve' && 'border-mauve-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'mauve' && 'border-gray-12',
               )}
               onClick={() => changeColor('mauve')}
             >
@@ -44,8 +44,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-slate-12',
-                color === 'slate' && 'border-slate-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'slate' && 'border-gray-12',
               )}
               onClick={() => changeColor('slate')}
             >
@@ -56,8 +56,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-sage-12',
-                color === 'sage' && 'border-sage-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'sage' && 'border-gray-12',
               )}
               onClick={() => changeColor('sage')}
             >
@@ -68,8 +68,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-olive-12',
-                color === 'olive' && 'border-olive-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'olive' && 'border-gray-12',
               )}
               onClick={() => changeColor('olive')}
             >
@@ -80,8 +80,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-sand-12',
-                color === 'sand' && 'border-sand-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'sand' && 'border-gray-12',
               )}
               onClick={() => changeColor('sand')}
             >
@@ -92,8 +92,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-gold-12',
-                color === 'gold' && 'border-gold-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'gold' && 'border-gray-12',
               )}
               onClick={() => changeColor('gold')}
             >
@@ -104,8 +104,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-bronze-12',
-                color === 'bronze' && 'border-bronze-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'bronze' && 'border-gray-12',
               )}
               onClick={() => changeColor('bronze')}
             >
@@ -116,8 +116,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-brown-12',
-                color === 'brown' && 'border-brown-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'brown' && 'border-gray-12',
               )}
               onClick={() => changeColor('brown')}
             >
@@ -128,8 +128,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-yellow-12',
-                color === 'yellow' && 'border-yellow-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'yellow' && 'border-gray-12',
               )}
               onClick={() => changeColor('yellow')}
             >
@@ -140,8 +140,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-amber-12',
-                color === 'amber' && 'border-amber-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'amber' && 'border-gray-12',
               )}
               onClick={() => changeColor('amber')}
             >
@@ -152,8 +152,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-orange-12',
-                color === 'orange' && 'border-orange-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'orange' && 'border-gray-12',
               )}
               onClick={() => changeColor('orange')}
             >
@@ -164,8 +164,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-tomato-12',
-                color === 'tomato' && 'border-tomato-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'tomato' && 'border-gray-12',
               )}
               onClick={() => changeColor('tomato')}
             >
@@ -176,8 +176,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-red-12',
-                color === 'red' && 'border-red-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'red' && 'border-gray-12',
               )}
               onClick={() => changeColor('red')}
             >
@@ -188,8 +188,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-ruby-12',
-                color === 'ruby' && 'border-ruby-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'ruby' && 'border-gray-12',
               )}
               onClick={() => changeColor('ruby')}
             >
@@ -200,8 +200,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-crimson-12',
-                color === 'crimson' && 'border-crimson-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'crimson' && 'border-gray-12',
               )}
               onClick={() => changeColor('crimson')}
             >
@@ -212,8 +212,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-pink-12',
-                color === 'pink' && 'border-pink-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'pink' && 'border-gray-12',
               )}
               onClick={() => changeColor('pink')}
             >
@@ -224,8 +224,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-plum-12',
-                color === 'plum' && 'border-plum-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'plum' && 'border-gray-12',
               )}
               onClick={() => changeColor('plum')}
             >
@@ -236,8 +236,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-purple-12',
-                color === 'purple' && 'border-purple-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'purple' && 'border-gray-12',
               )}
               onClick={() => changeColor('purple')}
             >
@@ -248,8 +248,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-violet-12',
-                color === 'violet' && 'border-violet-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'violet' && 'border-gray-12',
               )}
               onClick={() => changeColor('violet')}
             >
@@ -260,8 +260,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-iris-12',
-                color === 'iris' && 'border-iris-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'iris' && 'border-gray-12',
               )}
               onClick={() => changeColor('iris')}
             >
@@ -272,8 +272,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-indigo-12',
-                color === 'indigo' && 'border-indigo-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'indigo' && 'border-gray-12',
               )}
               onClick={() => changeColor('indigo')}
             >
@@ -284,8 +284,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-blue-12',
-                color === 'blue' && 'border-blue-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'blue' && 'border-gray-12',
               )}
               onClick={() => changeColor('blue')}
             >
@@ -296,8 +296,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-cyan-12',
-                color === 'cyan' && 'border-cyan-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'cyan' && 'border-gray-12',
               )}
               onClick={() => changeColor('cyan')}
             >
@@ -308,8 +308,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-teal-12',
-                color === 'teal' && 'border-teal-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'teal' && 'border-gray-12',
               )}
               onClick={() => changeColor('teal')}
             >
@@ -320,8 +320,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-jade-12',
-                color === 'jade' && 'border-jade-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'jade' && 'border-gray-12',
               )}
               onClick={() => changeColor('jade')}
             >
@@ -332,8 +332,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-green-12',
-                color === 'green' && 'border-green-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'green' && 'border-gray-12',
               )}
               onClick={() => changeColor('green')}
             >
@@ -344,8 +344,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-grass-12',
-                color === 'grass' && 'border-grass-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'grass' && 'border-gray-12',
               )}
               onClick={() => changeColor('grass')}
             >
@@ -356,8 +356,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-lime-12',
-                color === 'lime' && 'border-lime-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'lime' && 'border-gray-12',
               )}
               onClick={() => changeColor('lime')}
             >
@@ -368,8 +368,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-mint-12',
-                color === 'mint' && 'border-mint-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'mint' && 'border-gray-12',
               )}
               onClick={() => changeColor('mint')}
             >
@@ -380,8 +380,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-sky-12',
-                color === 'sky' && 'border-sky-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
+                color === 'sky' && 'border-gray-12',
               )}
               onClick={() => changeColor('sky')}
             >
@@ -398,7 +398,7 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
                 theme === 'light' && 'border-gray-12',
               )}
               onClick={() => toggleTheme('light')}
@@ -430,7 +430,7 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
                 theme === 'dark' && 'border-gray-12',
               )}
               onClick={() => toggleTheme('dark')}
@@ -454,7 +454,7 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium text-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-sm font-medium',
                 theme === 'system' && 'border-gray-12',
               )}
               onClick={() => toggleTheme('system')}
