@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
-function generateScale(name) {
+function generateScale(name: string) {
   const scale = Array.from({ length: 12 }, (_, i) => {
     const id = i + 1
+
     return [
       [id, `var(--${name}-${id})`],
       [`a${id}`, `var(--${name}-a${id})`],
@@ -57,9 +58,9 @@ export default {
       primary: generateScale('primary'),
     },
     borderRadius: {
-      sm: 'calc(var(--radius) - 4px)',
+      sm: 'calc(var(--radius) - (var(--radius) / 2))',
       md: 'var(--radius)',
-      lg: 'calc(var(--radius) + 4px)',
+      lg: 'calc(var(--radius) + (var(--radius) / 2))',
       full: '99999px',
     },
   },

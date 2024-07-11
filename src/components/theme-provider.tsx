@@ -39,25 +39,32 @@ export const colors = [
   'mint',
   'sky',
 ] as const
-type Color = (typeof colors)[number]
+export type Color = (typeof colors)[number]
 
 export const themes = ['light', 'dark', 'system']
-type Theme = (typeof themes)[number]
+export type Theme = (typeof themes)[number]
+
+export const radii = ['0', '0.25', '0.5', '0.75', '1']
+export type Radius = (typeof radii)[number]
 
 type ThemeProviderProps = {
   children: ReactNode
   defaultTheme?: Theme
   defaultColor?: Color
+  defaultRadius?: Radius
   storageKey?: string
 }
 
 type ThemeProviderState = {
   theme: Theme
   resolvedTheme: string
-  toggleTheme: (theme: Theme) => void
+  toggleTheme: (value: Theme) => void
 
   color: Color
-  changeColor: (color: Color) => void
+  changeColor: (value: Color) => void
+
+  radius: Radius
+  changeRadius: (value: Radius) => void
 }
 
 const initialState: ThemeProviderState = {
@@ -66,6 +73,8 @@ const initialState: ThemeProviderState = {
   toggleTheme: () => null,
   color: 'gray',
   changeColor: () => null,
+  radius: '0.5',
+  changeRadius: () => null,
 }
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
@@ -74,6 +83,7 @@ export function ThemeProvider({
   children,
   defaultTheme = 'system',
   defaultColor = 'gray',
+  defaultRadius = '0.5',
   storageKey = 'toop-ui',
   ...props
 }: ThemeProviderProps) {
@@ -81,11 +91,6 @@ export function ThemeProvider({
     () =>
       (localStorage.getItem(`${storageKey}.theme`) as Theme) || defaultTheme,
   )
-  const [color, setColor] = useState<Color>(
-    () =>
-      (localStorage.getItem(`${storageKey}.color`) as Color) || defaultColor,
-  )
-
   const [resolvedTheme, setResolvedTheme] = useState(() => {
     const persistedTheme =
       (localStorage.getItem(`${storageKey}.theme`) as Theme) || defaultTheme
@@ -101,6 +106,14 @@ export function ThemeProvider({
 
     return persistedTheme
   })
+  const [color, setColor] = useState<Color>(
+    () =>
+      (localStorage.getItem(`${storageKey}.color`) as Color) || defaultColor,
+  )
+  const [radius, setRadius] = useState<Radius>(
+    () =>
+      (localStorage.getItem(`${storageKey}.radius`) as Radius) || defaultRadius,
+  )
 
   useEffect(() => {
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
@@ -134,6 +147,12 @@ export function ThemeProvider({
     root.classList.add(color)
   }, [color])
 
+  useEffect(() => {
+    const root = window.document.documentElement
+
+    root.style.setProperty('--radius', `${radius}rem`)
+  }, [radius])
+
   function toggleTheme(value: Theme) {
     localStorage.setItem(`${storageKey}.theme`, value)
     setTheme(value)
@@ -163,12 +182,19 @@ export function ThemeProvider({
     setColor(value)
   }
 
+  function changeRadius(value: Radius) {
+    localStorage.setItem(`${storageKey}.radius`, value)
+    setRadius(value)
+  }
+
   const value = {
     theme,
     resolvedTheme,
     toggleTheme,
     color,
     changeColor,
+    radius,
+    changeRadius,
   }
 
   return (
