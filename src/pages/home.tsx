@@ -9,9 +9,9 @@ export function Home() {
     <div className="h-screen items-center overflow-auto px-4 py-8 antialiased">
       <div className="mx-auto flex max-w-96 flex-col gap-6">
         <div className="flex gap-2">
-          <div className="h-20 flex-1 rounded-sm bg-primary-9" />
-          <div className="h-20 flex-1 rounded-md bg-primary-9" />
-          <div className="h-20 flex-1 rounded-lg bg-primary-9" />
+          <div className="h-20 flex-1 rounded-sm bg-primary-500" />
+          <div className="h-20 flex-1 rounded-md bg-primary-500" />
+          <div className="h-20 flex-1 rounded-lg bg-primary-500" />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -23,19 +23,12 @@ export function Home() {
                 key={item}
                 type="button"
                 className={cn(
-                  'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-xs font-medium',
-                  color === item && 'border-gray-12',
+                  'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium',
+                  color === item && 'border-gray-900',
                 )}
                 onClick={() => changeColor(item)}
               >
-                <div
-                  className={cn(
-                    'size-[18px] rounded-full',
-                    item && {
-                      [`bg-${item}-9`]: true,
-                    },
-                  )}
-                />
+                <div className={cn('size-[18px] rounded-full')} />
                 {item}
               </button>
             ))}
@@ -49,8 +42,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-xs font-medium',
-                theme === 'light' && 'border-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium',
+                theme === 'light' && 'border-gray-900',
               )}
               onClick={() => toggleTheme('light')}
             >
@@ -81,8 +74,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-xs font-medium',
-                theme === 'dark' && 'border-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium',
+                theme === 'dark' && 'border-gray-900',
               )}
               onClick={() => toggleTheme('dark')}
             >
@@ -105,8 +98,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-5 px-3 text-xs font-medium',
-                theme === 'system' && 'border-gray-12',
+                'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium',
+                theme === 'system' && 'border-gray-900',
               )}
               onClick={() => toggleTheme('system')}
             >
@@ -140,8 +133,8 @@ export function Home() {
                 key={item}
                 type="button"
                 className={cn(
-                  'flex h-9 items-center justify-center gap-2 rounded-md border border-gray-5 px-3 text-xs font-medium',
-                  radius === item && 'border-gray-12',
+                  'flex h-9 items-center justify-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium',
+                  radius === item && 'border-gray-900',
                 )}
                 onClick={() => changeRadius(item)}
               >
