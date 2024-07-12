@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -24,6 +26,7 @@ module.exports = {
           900: 'var(--primary-900)',
           950: 'var(--primary-950)',
         },
+        gray: colors.neutral,
       },
       fontFamily: {
         sans: '"Plus Jakarta Sans", sans-serif',
