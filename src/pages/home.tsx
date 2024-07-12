@@ -6,8 +6,8 @@ export function Home() {
     useTheme()
 
   return (
-    <div className="h-screen items-center overflow-auto px-4 py-8 antialiased">
-      <div className="mx-auto flex max-w-96 flex-col gap-6">
+    <div className="h-screen overflow-auto px-4 py-8 antialiased">
+      <div className="mx-auto flex max-w-96 flex-col justify-center gap-6 overflow-auto">
         <div className="flex gap-2">
           <div className="h-20 flex-1 rounded-sm bg-primary-500" />
           <div className="h-20 flex-1 rounded-md bg-primary-500" />
@@ -28,7 +28,28 @@ export function Home() {
                 )}
                 onClick={() => changeColor(item)}
               >
-                <div className={cn('size-[18px] rounded-full')} />
+                <div
+                  className={cn('size-[18px] rounded-full', {
+                    'bg-gray-500': item === 'gray',
+                    'bg-red-500': item === 'red',
+                    'bg-orange-500': item === 'orange',
+                    'bg-amber-500': item === 'amber',
+                    'bg-yellow-500': item === 'yellow',
+                    'bg-lime-500': item === 'lime',
+                    'bg-green-500': item === 'green',
+                    'bg-emerald-500': item === 'emerald',
+                    'bg-teal-500': item === 'teal',
+                    'bg-cyan-500': item === 'cyan',
+                    'bg-sky-500': item === 'sky',
+                    'bg-blue-500': item === 'blue',
+                    'bg-indigo-500': item === 'indigo',
+                    'bg-violet-500': item === 'violet',
+                    'bg-purple-500': item === 'purple',
+                    'bg-fuchsia-500': item === 'fuchsia',
+                    'bg-pink-500': item === 'pink',
+                    'bg-rose-500': item === 'rose',
+                  })}
+                />
                 {item}
               </button>
             ))}

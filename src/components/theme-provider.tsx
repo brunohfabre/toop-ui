@@ -6,6 +6,8 @@ import {
   type ReactNode,
 } from 'react'
 
+import tailwindColors from 'tailwindcss/colors'
+
 export const colors = [
   'gray',
   'red',
@@ -25,7 +27,6 @@ export const colors = [
   'fuchsia',
   'pink',
   'rose',
-  'primary',
 ]
 export type Color = (typeof colors)[number]
 
@@ -133,6 +134,15 @@ export function ThemeProvider({
     const root = window.document.documentElement
 
     root.classList.add(color)
+
+    const tailwindColorsVariants = tailwindColors as any
+
+    const primaryColorVariants: Record<string, string> =
+      tailwindColorsVariants[color]
+
+    Object.entries(primaryColorVariants).forEach(([key, value]) => {
+      root.style.setProperty(`--primary-${key}`, value)
+    })
   }, [color])
 
   useEffect(() => {
