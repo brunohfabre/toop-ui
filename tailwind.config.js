@@ -13,6 +13,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        border: 'var(--border)',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
         primary: {
           50: 'var(--primary-50)',
           100: 'var(--primary-100)',

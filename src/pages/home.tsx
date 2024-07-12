@@ -1,13 +1,13 @@
-import { colors, radii, useTheme } from '../components/theme-provider'
-import { cn } from '../components/utils'
+import { colors, radii, useTheme } from '@/components/theme-provider'
+import { cn } from '@/components/utils'
 
 export function Home() {
   const { theme, toggleTheme, color, changeColor, radius, changeRadius } =
     useTheme()
 
   return (
-    <div className="h-screen overflow-auto px-4 py-8 antialiased dark:bg-gray-900 dark:text-gray-50">
-      <div className="mx-auto flex max-w-96 flex-col justify-center gap-6 overflow-auto">
+    <div className="flex flex-1 items-center justify-center">
+      <div className="flex max-w-96 flex-1 flex-col gap-6">
         <div className="flex gap-2">
           <div className="h-20 flex-1 rounded-sm bg-primary-500" />
           <div className="h-20 flex-1 rounded-md bg-primary-500" />
@@ -23,8 +23,8 @@ export function Home() {
                 key={item}
                 type="button"
                 className={cn(
-                  'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium dark:border-gray-700',
-                  color === item && 'border-gray-900 dark:border-gray-200',
+                  'flex h-9 items-center gap-2 rounded-md border px-3 text-xs font-medium',
+                  color === item && 'border-foreground',
                 )}
                 onClick={() => changeColor(item)}
               >
@@ -63,8 +63,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium dark:border-gray-700',
-                theme === 'light' && 'border-gray-900 dark:border-gray-200',
+                'flex h-9 items-center gap-2 rounded-md border px-3 text-xs font-medium',
+                theme === 'light' && 'border-foreground',
               )}
               onClick={() => toggleTheme('light')}
             >
@@ -95,8 +95,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium dark:border-gray-700',
-                theme === 'dark' && 'border-gray-900 dark:border-gray-200',
+                'flex h-9 items-center gap-2 rounded-md border px-3 text-xs font-medium',
+                theme === 'dark' && 'border-foreground',
               )}
               onClick={() => toggleTheme('dark')}
             >
@@ -119,8 +119,8 @@ export function Home() {
             <button
               type="button"
               className={cn(
-                'flex h-9 items-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium dark:border-gray-700',
-                theme === 'system' && 'border-gray-900 dark:border-gray-200',
+                'flex h-9 items-center gap-2 rounded-md border px-3 text-xs font-medium',
+                theme === 'system' && 'border-foreground',
               )}
               onClick={() => toggleTheme('system')}
             >
@@ -154,8 +154,8 @@ export function Home() {
                 key={item}
                 type="button"
                 className={cn(
-                  'flex h-9 items-center justify-center gap-2 rounded-md border border-gray-200 px-3 text-xs font-medium dark:border-gray-700',
-                  radius === item && 'border-gray-900 dark:border-gray-200',
+                  'flex h-9 items-center justify-center gap-2 rounded-md border px-3 text-xs font-medium',
+                  radius === item && 'border-foreground',
                 )}
                 onClick={() => changeRadius(item)}
               >
