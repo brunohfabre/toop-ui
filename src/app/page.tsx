@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from "@/components/button"
-import { PageHeader } from "@/components/page-header"
-import { Sidebar } from "@/components/sidebar"
-import { Table, type SortType } from "@/components/table"
-import { useState } from "react"
+import { Button } from '@/components/button'
+import { PageHeader } from '@/components/page-header'
+
+import { type SortType, Table } from '@/components/table'
+import { useState } from 'react'
 
 const data = [
   {
@@ -2215,57 +2215,53 @@ export default function Home() {
   const [selected, setSelected] = useState<DataType[]>([])
 
   return (
-    <div className="h-screen antialiased flex">
-      <Sidebar />
+    <main className="flex-1 overflow-auto flex flex-col">
+      <PageHeader />
 
-      <main className="flex-1 overflow-auto flex flex-col">
-        <PageHeader />
+      <div className="overflow-auto flex flex-col gap-4 p-4">
+        <header>
+          <Button>+ Item</Button>
+        </header>
 
-        <div className="overflow-auto flex flex-col gap-4 p-4">
-          <header>
-            <Button>+ Item</Button>
-          </header>
-
-          <Table
-            rowId="id"
-            data={data}
-            headers={[
-              {
-                dataIndex: 'id',
-                label: 'ID',
-              },
-              {
-                dataIndex: 'firstName',
-                label: 'Name',
-                sortable: true,
-              },
-              {
-                dataIndex: 'username',
-                label: 'Username',
-              },
-              {
-                dataIndex: 'email',
-                label: 'Email',
-                sortable: true,
-              },
-              {
-                dataIndex: 'phone',
-                label: 'Phone',
-              },
-            ]}
-            rowsSelected={selected}
-            onRowSelection={(value) => setSelected(value)}
-            sort={sort}
-            onSort={(value) => setSort(value)}
-            actions={[
-              {
-                label: 'Action 1',
-                onClick: (item) => console.log(item),
-              },
-            ]}
-          />
-        </div>
-      </main>
-    </div>
+        <Table
+          rowId="id"
+          data={data}
+          headers={[
+            {
+              dataIndex: 'id',
+              label: 'ID',
+            },
+            {
+              dataIndex: 'firstName',
+              label: 'Name',
+              sortable: true,
+            },
+            {
+              dataIndex: 'username',
+              label: 'Username',
+            },
+            {
+              dataIndex: 'email',
+              label: 'Email',
+              sortable: true,
+            },
+            {
+              dataIndex: 'phone',
+              label: 'Phone',
+            },
+          ]}
+          rowsSelected={selected}
+          onRowSelection={(value) => setSelected(value)}
+          sort={sort}
+          onSort={(value) => setSort(value)}
+          actions={[
+            {
+              label: 'Action 1',
+              onClick: (item) => console.log(item),
+            },
+          ]}
+        />
+      </div>
+    </main>
   )
 }
