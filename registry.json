@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "files": [
+        {
+          "path": "src/components/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
