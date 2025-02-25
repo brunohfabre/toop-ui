@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:component",
+  "title": "Button",
+  "files": [
+    {
+      "path": "src/components/button.tsx",
+      "content": "import { Slot } from '@radix-ui/react-slot'\nimport type { ButtonHTMLAttributes } from 'react'\n\nconst variants = {\n  default: 'bg-zinc-500 text-white hover:bg-zinc-600',\n  secondary: 'bg-zinc-100 text-black hover:bg-zinc-200',\n  outline: 'bg-transparent border border-zinc-500 text-black hover:bg-zinc-200',\n  ghost: 'text-zinc-500 hover:bg-zinc-200',\n  link: 'text-zinc-500 hover:underline',\n}\n\nconst sizes = {\n  sm: 'h-7 px-3 text-sm',\n  md: 'h-9 px-4 text-sm',\n  lg: 'h-12 px-5 text-base',\n}\n\ntype VariantType = keyof typeof variants\ntype SizeType = keyof typeof sizes\n\nfunction Button({\n  className,\n  asChild = false,\n  size = 'md',\n  variant = 'default',\n  ...props\n}: ButtonHTMLAttributes<HTMLButtonElement> & {\n  asChild?: boolean\n  size?: SizeType\n  variant?: VariantType\n}) {\n  const Comp = asChild ? Slot : 'button'\n\n  return (\n    <Comp\n      className={`cursor-pointer ${sizes[size]} ${variants[variant]} ${className}`}\n      {...props}\n    />\n  )\n}\n\nexport type { VariantType }\nexport { Button }\n",
+      "type": "registry:component"
+    }
+  ]
+}
